@@ -77,9 +77,9 @@ function makePredictions() {
             console.log(returnedData);
 
             if (returnedData["prediction"] == 1) {
-                $("#output").text("Please Check with your Doctor, you may have Heart Disease");
+                $("#output").text("Please check with your Doctor, you may have Heart Disease");
             } else {
-                $("#output").text("Our results show you are HEALTHY!");
+                $("#output").text("Our model shows you are HEALTHY!");
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
