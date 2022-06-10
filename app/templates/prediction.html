@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Data Table</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="static/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+		<!-- JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- JS -->
+		<script type="text/javascript" src="static/js/logic.js"></script>
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="index.html" class="logo"><strong>Capstone Project</strong> <span>by Group 3</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="/">Home</a></li>
+						<li><a href="/tableau">Tableau Visualizations</a></li>
+						<li><a href="/datatable">Data Table</a></li>
+						<li><a href="/sources">Sources</a></li>
+						<li><a href="/aboutus">About Us</a></li>
+						<li><a href="/MLcreation">ML Creation Analysis</a></li>
+					</ul>
+					<ul class="actions stacked">
+						<li><a href="/prediction" class="button primary fit">Could I have Heart Disease?</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1 ><i class="iconheader bi bi-gear-wide-connected"></i>  Prediction</h1>
+									</header>
+									<h3>Please answer questions below to predict if you could have Heart Disease.</h3>
+									<h4>About you</h4>
+									<div class="row gtr-uniform">
+									
+									<!-- first Section -->
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4">Choose your Age</label>
+											<select class="form-select" id="AgeCategory">
+											  <option value = '18-24'>18-24</option>
+											  <option value = '25-29'>25-29</option>
+											  <option value = '30-34'>30-34</option>
+											  <option value = '35-39'>35-39</option>
+											  <option value = '40-44'>40-44</option>
+											  <option value = '45-49'>45-49</option>
+											  <option value = '50-54'>50-54</option>
+											  <option value = '55-59'>55-59</option>
+											  <option value = '60-64'>60-64</option>
+											  <option value = '65-69'>65-69</option>
+											  <option value = '70-74'>70-74</option>
+											  <option value = '75-79'>75-79</option>
+											  <option value = '80 or older'>80 or older</option>
+											</select>
+										</div>
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4" for = "GenHealth">How is your general health?</label>
+											<select class="form-select" id="GenHealth">
+											  <option value = 'Excellent'>Excellent</option>
+											  <option value = 'Fair'>Fair</option>
+											  <option value = 'Good'>Good</option>
+											  <option value = 'Poor'>Poor</option>
+											  <option value = 'Very good'>Very Good</option>
+											</select>
+										</div>
+										<div  class="col-6 col-12-small">
+											<label class="form-label mt-4" for ='Sex'>What is your birth gender?</label>
+											<select class="form-select" id="Sex">
+											  <option value = 'Female'>Female</option>
+											  <option value = 'Male'>Male</option>
+											</select>
+										</div>
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4" for='Race'>What best describes your Race?</label>
+											<select class="form-select" id="Race">
+											  <option value = 'White'>White</option>
+											  <option value = 'American Indian/Alaskan Native'>American Indian/Alaskan Native</option>
+											  <option value = 'Asian'>Asian</option>
+											  <option value = 'Black'>Black</option>
+											  <option value = 'Hispanic'>Hispanic</option>
+											  <option value = 'Other'>Other</option>
+											</select>
+										</div>
+									</div>	
+									<br>
+									<h4>Your Daily Habits</h4>
+									<div class="row gtr-uniform">
+
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4" for ='AlcoholDrinking'>I am a Heavy Drinker?(14+ drinks men, 7+ drinks women) </label>
+											<select class="form-select" id="AlcoholDrinking">
+											  <option value = 'No'>No</option>
+											  <option value = 'Yes'>Yes</option>
+											</select>
+										</div>
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4" for="PhysicalHealth"># of Days I had physical illness or injury in past 30 days</label>
+											<input type="text" class = 'form-control'  value="0" id="PhysicalHealth">
+										</div>
+										<div class="col-6 col-12-small">
+											<label  class="form-label mt-4" for ='Smoking'>Smoked at least 5 packs of 
+												cigaretts in my life</label>
+											<select class="form-select" id="Smoking">
+											  <option value = 'No'>No</option>
+											  <option value = 'Yes'>Yes</option>
+											</select>
+										</div>
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4" for="MentalHealth"># of Days my Mental Health was not good in past 30 days</label>
+											<input type="text" class = 'form-control' value="0" id="MentalHealth">
+										</div>
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4" for ='DiffWalking'>Difficulty Walking or Climbing stairs</label>
+											<select class="form-select" id="DiffWalking">
+											  <option value = 'No'>No</option>
+											  <option value = 'Yes'>Yes</option>
+											</select>
+										</div>
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4" for ='PhysicalActivity'>I have exercised in the past 30 days</label>
+											<select class="form-select" id="PhysicalActivity">
+											  <option value = 'No'>No</option>
+											  <option value = 'Yes'>Yes</option>
+											</select>
+										</div>
+									</div>
+									<br>
+									<h4>About your Health</h4>
+									<div class="row gtr-uniform">
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4" for = 'Diabetic'>Do you have Diabetes?</label>
+											<select class="form-select" id="Diabetic">
+												<option value = 'No'>No</option>
+												<option value = 'No, borderline diabetes'>No, Borderline Diabetes</option>
+												<option value = 'Yes'>Yes</option>
+												<option value = 'Yes (during pregnancy)'>Yes, During pregnancy</option>
+											</select>
+										</div>
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4" for ='KidneyDisease'>Do you suffer from Kidney Disease?</label>
+											<select class="form-select" id="KidneyDisease">
+											<option value = 'No'>No</option>
+											<option value = 'Yes'>Yes</option>
+											</select>
+										</div>
+										<div class="col-6 col-12-small">
+											<label class="form-label mt-4" for ='Asthma'>Do you have Asthma?</label>
+											<select class="form-select" id="Asthma">
+											<option value = 'No'>No</option>
+											<option value = 'Yes'>Yes</option>
+											</select>
+										</div>
+
+										<div class="col-6 col-12-small">
+											<label  class="form-label mt-4" for ='SkinCancer'>Do you suffer from Skin Cancer?</label>
+											<select class="form-select" id="SkinCancer">
+											<option value = 'No'>No</option>
+											<option value = 'Yes'>Yes</option>
+											</select>
+										</div>
+
+									<div class="col-6 col-12-small">
+										<label class="col-form-label" for="BMI">Give an estimate on your BMI (body mass index)</label>
+										<input type="text" class="form-control" value="28.50" id="BMI">
+									</div>
+									<div class="col-6 col-12-small">
+										<label class="col-form-label" for="Stroke">Have you had a Stroke?</label>
+										<select class="form-select" id="Stroke">
+											<option value = 'No'>No</option>
+											<option value = 'Yes'>Yes</option>
+											</select>
+									</div>
+								</div>
+							<br>
+							<div class="row">
+								<div class="col-md-12">
+									<button type="button" class="btn btn-primary" id="filter">Make Prediction!</button>
+								</div>
+								<br>
+							</div>
+								<div class ='pred' id = 'output' >
+							</div>
+								</div>
+							</section>
+						</div>
+					</div>
+
+				<!-- Contact -->
+						</div>
+					</section>
+
+				<!-- Footer -->
+				<br>
+				<br>
+				<br>
+				<br>
+
+			
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.scrolly.min.js"></script>
+			<script src="static/js/jquery.scrollex.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>
