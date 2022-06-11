@@ -31,6 +31,7 @@ def datatable():
     # Return template and data
     return render_template("datatable.html")
 @app.route("/sources")
+
 def sources():
     # Return template and data
     return render_template("sources.html")
