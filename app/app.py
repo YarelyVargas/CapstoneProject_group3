@@ -26,6 +26,11 @@ def tableau():
     # Return template and data
     return render_template("tableau.html")
 
+@app.route("/tableau")
+def tableau2():
+    # Return template and data
+    return render_template("tableau.html")
+
 @app.route("/datatable")
 def datatable():
     # Return template and data
